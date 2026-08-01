@@ -1,0 +1,44 @@
+generated: '2026-07-31'
+method: searched
+source: registry searches + https://github.com/Ambience-Healthcare
+packages: []
+registries_probed:
+- registry: npm
+  query: ambience healthcare
+  result: no first-party package
+  note: '`@ambienceai/mcp-server` matches the token "ambience" but is an unrelated
+    generative-media MCP server, not Ambience Healthcare. Not recorded.'
+- registry: pypi
+  queries: [ambience, ambience-healthcare, ambience-sdk]
+  result: no first-party package
+  note: The `ambience` project on PyPI is an unrelated ambient-soundscape audio player.
+- registry: rubygems
+  result: no first-party package
+- registry: packagist
+  result: no first-party package
+- registry: crates.io
+  result: no first-party package
+- registry: nuget
+  result: no first-party package
+- registry: maven-central
+  result: no first-party package
+- registry: pkg.go.dev
+  result: no first-party package
+github_org:
+  url: https://github.com/Ambience-Healthcare
+  public_repos: 6
+  first_party_libraries: 0
+  note: 'All six public repositories are forks of third-party projects (markdown-draft-js,
+    TypeScript, MoreData, WhatsNewKit, MetaCodable, python-json-patch). No Ambience
+    client library, SDK or CLI is published.'
+findings:
+  official_sdks: 0
+  conclusion: 'Ambience Healthcare ships no public client libraries. Integration is
+    delivered as an in-EHR deployment (Epic Toolbox / athenahealth Marketplace / Oracle
+    Cerner) plus an access-gated Integration API whose credentials and documentation
+    are issued on request via emr-integration@ambiencehealthcare.com. No `SDKs` pointer
+    is emitted, because there is no SDK.'
+x-evidence:
+  fetched: '2026-07-31'
+  npm_search: https://registry.npmjs.org/-/v1/search?text=ambience%20healthcare
+  github_api: https://api.github.com/orgs/ambience-healthcare/repos

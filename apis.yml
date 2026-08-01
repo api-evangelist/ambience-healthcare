@@ -1,23 +1,126 @@
 aid: ambience-healthcare
 name: Ambience Healthcare
-description: 'Ambience Healthcare is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Ambience Healthcare is a San Francisco based ambient clinical AI company
+  whose platform listens to the patient encounter and produces documentation, coding
+  and revenue-cycle output for health systems. Its products include AutoScribe (ambient
+  AI medical scribe tuned to 100+ specialties and subspecialties), AutoCDI, AutoAVS,
+  AutoRefer, AutoPrep, a Chart Awareness layer and a nursing suite. Ambience runs inside
+  the EHR rather than beside it: it is distributed through the Epic Toolbox (Hyperspace
+  and Haiku) using SMART on FHIR, through the athenahealth Marketplace, and into Oracle
+  Cerner Millennium over FHIR and REST APIs, reading patient context from the chart
+  and writing structured notes, codes and summaries back. The company also publishes
+  a partner-facing Integration API programme at docs.ambiencehealthcare.com for EHRs,
+  telehealth platforms and healthcare applications covering encounter transcription,
+  note generation, CDI with ICD-10 suggestion and chart context enrichment, with access
+  granted on request rather than through public self-service signup.'
 url: https://raw.githubusercontent.com/api-evangelist/ambience-healthcare/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-07-31'
 modified: '2026-07-31'
+image: https://framerusercontent.com/images/l2jbzG0Wzk7GJYt31m2QzU82JzQ.png
 tags:
 - Company
-apis: []
+- Healthcare
+- Artificial Intelligence
+- Clinical Documentation
+- Ambient AI
+- Medical Coding
+- Electronic Health Records
+- FHIR
+- Health IT
+- Speech Recognition
+apis:
+- name: Ambience Integration API
+  description: 'Partner-facing integration APIs for EHRs, telehealth platforms and
+    healthcare applications, covering medical encounter transcription, clinical note
+    generation, integrated CDI with ICD-10 suggestions, EHR patient context enrichment
+    and authenticated access control. Documentation and credentials are granted on
+    request via emr-integration@ambiencehealthcare.com; no public API reference, base
+    URL or self-service signup is published, so no baseURL is recorded here.'
+  humanURL: https://docs.ambiencehealthcare.com/
+  x-access: request-only
+  tags:
+  - Clinical Documentation
+  - Transcription
+  - Medical Coding
+  - Electronic Health Records
+  properties:
+  - type: Documentation
+    url: https://docs.ambiencehealthcare.com/
+  - type: Contact
+    url: mailto:emr-integration@ambiencehealthcare.com
+- name: Ambience Identity (OAuth 2.0 / OpenID Connect)
+  description: 'The OpenID Connect provider fronting the Ambience application and API
+    platform. Publishes an RFC 8414 / OIDC Discovery document anonymously at /.well-known/openid-configuration,
+    advertising authorization, token, device-code, userinfo, JWKS, dynamic client registration
+    and revocation endpoints, PKCE (S256), DPoP (ES256), private_key_jwt client authentication
+    and the client_credentials, authorization_code, refresh_token, device_code, token-exchange
+    and jwt-bearer grants.'
+  humanURL: https://auth.ambiencehealthcare.com/.well-known/openid-configuration
+  baseURL: https://auth.ambiencehealthcare.com
+  tags:
+  - Authentication
+  - OAuth
+  - OpenID Connect
+  properties:
+  - type: OpenIDConnect
+    url: https://auth.ambiencehealthcare.com/.well-known/openid-configuration
+  - type: WellKnown
+    url: well-known/ambience-healthcare-well-known.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-31'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
 common:
+- type: Authentication
+  url: authentication/ambience-healthcare-authentication.yml
+- type: OAuthScopes
+  url: scopes/ambience-healthcare-scopes.yml
+- type: WellKnown
+  url: well-known/ambience-healthcare-well-known.yml
+- type: Conformance
+  url: conformance/ambience-healthcare-conformance.yml
+- type: Packages
+  url: packages/ambience-healthcare-packages.yml
+- type: LLMsTxt
+  url: llms/ambience-healthcare-llms.txt
+- type: TrustCenter
+  url: security/ambience-healthcare-trust-center.yml
+- type: DomainSecurity
+  url: security/ambience-healthcare-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/ambience-healthcare_stock/
+  url: https://www.ambiencehealthcare.com/
+- type: DeveloperPortal
+  url: https://docs.ambiencehealthcare.com/
+- type: Documentation
+  url: https://docs.ambiencehealthcare.com/
+- type: Blog
+  url: https://www.ambiencehealthcare.com/blog
+- type: GitHubOrganization
+  url: https://github.com/Ambience-Healthcare
+- type: SignUp
+  url: https://www.ambiencehealthcare.com/demo
+- type: Login
+  url: https://app.ambiencehealthcare.com/
+- type: PrivacyPolicy
+  url: https://www.ambiencehealthcare.com/privacy
+- type: TermsOfService
+  url: https://cdn.prod.website-files.com/65be6ed75db0972f744bb6b1/65c1a3f7d8cbb7b2397bd541_63fd4608cf1aa8041a98d378_terms.pdf
+- type: Compliance
+  url: https://www.ambiencehealthcare.com/informatics
+- type: Careers
+  url: https://www.ambiencehealthcare.com/careers
+- type: CustomerStories
+  url: https://www.ambiencehealthcare.com/customer-stories
+- type: Products
+  url: https://www.ambiencehealthcare.com/products

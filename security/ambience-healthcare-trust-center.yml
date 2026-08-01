@@ -1,0 +1,12 @@
+generated: '2026-07-31'
+method: searched
+probe: true
+source: https://trust.ambiencehealthcare.com/
+url: https://trust.ambiencehealthcare.com/
+certifications:
+- HIPAA
+evidence:
+- source: https://trust.ambiencehealthcare.com/
+  keywords:
+  - hipaa
+  - trust center

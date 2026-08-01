@@ -1,0 +1,47 @@
+# Ambience Healthcare
+
+> Ambience Healthcare builds an ambient clinical AI platform that listens to the patient encounter and produces documentation, coding and revenue-cycle output for health systems. Its products include AutoScribe (an ambient AI medical scribe tuned to 100+ specialties and subspecialties), AutoCDI, AutoAVS, AutoRefer, AutoPrep, a Chart Awareness layer and a nursing suite. Ambience runs inside the EHR rather than beside it — distributed through the Epic Toolbox (Hyperspace and Haiku) using SMART on FHIR, through the athenahealth Marketplace, and into Oracle Cerner Millennium over FHIR and REST APIs.
+
+<!-- generated: 2026-07-31 | method: generated | source: apis.yml + artifacts in all/ambience-healthcare/ -->
+<!-- No /llms.txt is published by Ambience Healthcare (404 on www, docs and auth hosts as of 2026-07-31). -->
+
+## APIs
+
+- [Ambience Integration API](https://docs.ambiencehealthcare.com/): Partner-facing integration APIs for EHRs, telehealth platforms and healthcare applications — medical encounter transcription, clinical note generation, integrated CDI with ICD-10 suggestions, EHR patient context enrichment, and authenticated access control. Access-gated: documentation and credentials are requested via emr-integration@ambiencehealthcare.com. No public API reference, base URL or OpenAPI is published.
+- [Ambience Identity (OAuth 2.0 / OpenID Connect)](https://auth.ambiencehealthcare.com/.well-known/openid-configuration): The OpenID Connect provider fronting the Ambience application and API platform. Anonymous discovery document advertising authorization, token, device-code, userinfo, JWKS, dynamic client registration and revocation endpoints.
+
+## Specs
+
+- No public OpenAPI, Swagger, GraphQL, gRPC or AsyncAPI definition was found. Probed the docs host, the app host and the identity host for /openapi.json, /openapi.yaml, /swagger.json and /llms.txt — all 404.
+
+## Artifacts
+
+- [Authentication profile](authentication/ambience-healthcare-authentication.yml): OIDC/OAuth 2.0 scheme, endpoints, grants, PKCE, DPoP and client authentication methods, read from the live discovery document.
+- [OAuth scopes](scopes/ambience-healthcare-scopes.yml): The 14 protocol and profile scopes advertised by the identity tenant. No product/resource scopes are published.
+- [Well-known index](well-known/ambience-healthcare-well-known.yml): Every /.well-known/ path probed per host, with status.
+- [OpenID Connect discovery document](well-known/ambience-healthcare-openid-configuration.json): Saved verbatim.
+- [Conformance](conformance/ambience-healthcare-conformance.yml): OAuth 2.0, OIDC, RFC 8414, PKCE, DPoP, dynamic client registration, HL7 FHIR (as consumer), SMART on FHIR, ICD-10, HIPAA, SOC 2 Type I and II, GDPR — plus the standards that are absent.
+- [Domain security](security/ambience-healthcare-domain-security.yml): TLS, HSTS, DNSSEC, CAA, SPF and DMARC posture, probed.
+- [Trust center](security/ambience-healthcare-trust-center.yml): Vanta-hosted trust center at trust.ambiencehealthcare.com.
+- [Packages](packages/ambience-healthcare-packages.yml): No first-party SDKs exist in any public registry; recorded with the registries probed.
+
+## Docs
+
+- [Website](https://www.ambiencehealthcare.com/)
+- [API docs landing page](https://docs.ambiencehealthcare.com/)
+- [Products](https://www.ambiencehealthcare.com/products)
+- [For Informatics — EHR integration, standards and compliance](https://www.ambiencehealthcare.com/informatics)
+- [Customer stories](https://www.ambiencehealthcare.com/customer-stories)
+- [Blog](https://www.ambiencehealthcare.com/blog)
+- [Trust center](https://trust.ambiencehealthcare.com/)
+- [Privacy policy](https://www.ambiencehealthcare.com/privacy)
+- [Terms of service (PDF)](https://cdn.prod.website-files.com/65be6ed75db0972f744bb6b1/65c1a3f7d8cbb7b2397bd541_63fd4608cf1aa8041a98d378_terms.pdf)
+- [GitHub organization](https://github.com/Ambience-Healthcare)
+- [Request a demo](https://www.ambiencehealthcare.com/demo)
+
+## Notes for agents
+
+- There is no public, self-service Ambience API. Any integration begins with a request to emr-integration@ambiencehealthcare.com; there is no published pricing page, no sandbox, no changelog, no status page and no CLI.
+- No agent surface is published: no MCP server, no A2A agent card at either /.well-known/agent-card.json or the legacy /.well-known/agent.json, and no llms.txt of the provider's own.
+- No RFC 9116 security.txt and no vulnerability disclosure programme were found. security@ambiencehealthcare.com appears in the privacy policy as a general privacy contact, not as a disclosure channel.
+- The EHR-facing surface is standards-based but belongs to the EHR vendor, not to Ambience: Epic (SMART on FHIR via the Epic Toolbox), athenahealth (Marketplace / MDP), Oracle Cerner Millennium (FHIR + REST).

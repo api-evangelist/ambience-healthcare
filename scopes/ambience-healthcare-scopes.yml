@@ -1,0 +1,90 @@
+generated: '2026-07-31'
+method: searched
+source: https://auth.ambiencehealthcare.com/.well-known/openid-configuration
+docs: null
+note: 'Scopes are taken verbatim from the `scopes_supported` array of the provider''s
+  live OpenID Connect discovery document. These are the standard OIDC scopes and claim-scopes
+  the Ambience identity tenant advertises anonymously; Ambience publishes no product
+  or resource scope reference (the Integration API is access-gated), so no application-level
+  scopes such as read:encounters or write:notes are recorded here. Absence is the honest
+  result, not an omission.'
+schemes:
+- name: OpenIDConnect
+  source: well-known/ambience-healthcare-openid-configuration.json
+  issuer: https://auth.ambiencehealthcare.com/
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://auth.ambiencehealthcare.com/authorize
+    tokenUrl: https://auth.ambiencehealthcare.com/oauth/token
+  - flow: clientCredentials
+    tokenUrl: https://auth.ambiencehealthcare.com/oauth/token
+  - flow: deviceCode
+    deviceAuthorizationUrl: https://auth.ambiencehealthcare.com/oauth/device/code
+    tokenUrl: https://auth.ambiencehealthcare.com/oauth/token
+scopes:
+- scope: openid
+  description: Request an OpenID Connect ID token for the authenticating subject.
+  kind: protocol
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: profile
+  description: Basic profile claims for the authenticating subject.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: offline_access
+  description: Issue a refresh token so the client can obtain new access tokens without
+    user interaction.
+  kind: protocol
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: name
+  description: The subject's full name claim.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: given_name
+  description: The subject's given name claim.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: family_name
+  description: The subject's family name claim.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: nickname
+  description: The subject's nickname claim.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: email
+  description: The subject's email address claim.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: email_verified
+  description: Whether the subject's email address has been verified.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: picture
+  description: The subject's profile picture URL claim.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: created_at
+  description: The timestamp the subject's identity record was created.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: identities
+  description: The linked identity providers associated with the subject.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: phone
+  description: The subject's phone number claim.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+- scope: address
+  description: The subject's address claim.
+  kind: profile
+  sources: [well-known/ambience-healthcare-openid-configuration.json]
+coverage:
+  scopes_total: 14
+  product_scopes: 0
+  protocol_or_profile_scopes: 14
+x-evidence:
+  fetched: '2026-07-31'
+  url: https://auth.ambiencehealthcare.com/.well-known/openid-configuration
+  http_status: 200
+  content_type: application/json; charset=utf-8

@@ -1,0 +1,78 @@
+generated: '2026-07-31'
+method: searched
+source: live probes of every host published in apis.yml
+hosts:
+- host: https://auth.ambiencehealthcare.com
+  role: identity provider (Auth0-hosted OpenID Connect)
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: application/json
+    file: ambience-healthcare-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: application/json
+    note: byte-identical to the OIDC discovery document; RFC 8414 metadata served
+      at both paths
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://www.ambiencehealthcare.com
+  role: marketing website
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://docs.ambiencehealthcare.com
+  role: integration API docs landing page
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /openapi.yaml
+    status: 404
+- host: https://app.ambiencehealthcare.com
+  role: clinician/admin web application (redirects to auth.ambiencehealthcare.com)
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://trust.ambiencehealthcare.com
+  role: Vanta-hosted trust center
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 200
+    verdict: rejected
+    note: single-page-app catch-all — every path under this host returns the same
+      HTML trust-report shell, not an AgentCard JSON object
+  - path: /.well-known/agent.json
+    status: 200
+    verdict: rejected
+    note: same SPA catch-all HTML shell
+notes:
+- No RFC 9116 security.txt is published on any Ambience host.
+- No /.well-known/api-catalog (RFC 9727) and no ai-plugin.json.
+- The only real /.well-known/ surface is the identity provider's OIDC/OAuth metadata.
+x-evidence:
+  fetched: '2026-07-31'
+  method: HTTP GET with redirects followed, status and content-type recorded per path
