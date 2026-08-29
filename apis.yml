@@ -14,6 +14,8 @@ description: 'Ambience Healthcare is a San Francisco based ambient clinical AI c
   note generation, CDI with ICD-10 suggestion and chart context enrichment, with access
   granted on request rather than through public self-service signup.'
 url: https://raw.githubusercontent.com/api-evangelist/ambience-healthcare/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
 x-type: company
 x-source: harvest:secondary-market
 x-tier: profiled
