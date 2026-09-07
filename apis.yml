@@ -112,6 +112,18 @@ x-enrichment:
   artifacts_added: 9
   pass: local-v1
 common:
+- type: Clinicians
+  url: https://www.ambiencehealthcare.com/clinicians
+- type: Business
+  url: https://www.ambiencehealthcare.com/business
+- type: Informatics
+  url: https://www.ambiencehealthcare.com/informatics
+- type: Demo
+  url: https://www.ambiencehealthcare.com/demo
+- type: LinkedIn
+  url: https://www.linkedin.com/company/ambience-healthcare
+- type: Twitter
+  url: https://twitter.com/AmbienceHQ
 - type: Authentication
   url: authentication/ambience-healthcare-authentication.yml
 - type: OAuthScopes
@@ -154,5 +166,3 @@ common:
   url: https://www.ambiencehealthcare.com/customer-stories
 - type: Products
   url: https://www.ambiencehealthcare.com/products
-x-parent: ambience
-x-relationship: product
