@@ -154,3 +154,5 @@ common:
   url: https://www.ambiencehealthcare.com/customer-stories
 - type: Products
   url: https://www.ambiencehealthcare.com/products
+x-parent: ambience
+x-relationship: product
