@@ -64,5 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Ambience Healthcare is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/ambience-healthcare_stock/
+Ambience Healthcare is a San Francisco based ambient clinical AI company whose platform listens to the patient encounter and produces documentation, coding and revenue-cycle output for health systems. Its products include AutoScribe (ambient AI medical scribe tuned to 100+ specialties and subspecialties), AutoCDI, AutoAVS, AutoRefer, AutoPrep, a Chart Awareness layer and a nursing suite. Ambience runs inside the EHR rather than beside it: it is distributed through the Epic Toolbox (Hyperspace and Haiku) using SMART on FHIR, through the athenahealth Marketplace, and into Oracle Cerner Millennium over FHIR and REST APIs, reading patient context from the chart and writing structured notes, codes and summaries back. The company also publishes a partner-facing Integration API programme at docs.ambiencehealthcare.com for EHRs, telehealth platforms and healthcare applications covering encounter transcription, note generation, CDI with ICD-10 suggestion and chart context enrichment, with access granted on request rather than through public self-service signup.
+
+**Areas:** Company · Healthcare · Artificial Intelligence · Clinical Documentation · Ambient AI · Medical Coding · Electronic Health Records · FHIR · Health IT · Speech Recognition
+
+## Ambience Healthcare on APIs.io
+
+Everything profiled for Ambience Healthcare is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ambience-healthcare/](https://apis.io/providers/ambience-healthcare/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Ambience Integration API](https://apis.io/apis/ambience-healthcare/ambience-integration-api/) — Partner-facing integration APIs for EHRs, telehealth platforms and healthcare applications, covering medical encounter transcription, clinical note…
+- [Ambience Identity (OAuth 2.0 / OpenID Connect)](https://apis.io/apis/ambience-healthcare/ambience-identity-oauth-20-openid-connect/) — The OpenID Connect provider fronting the Ambience application and API platform. Publishes an RFC 8414 / OIDC Discovery document anonymously at…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Ambience Healthcare Authentication](https://apis.io/security/ambience-healthcare/ambience-healthcare-authentication/)
+- [Ambience Healthcare Domain Security](https://apis.io/security/ambience-healthcare/ambience-healthcare-domain-security/)
+- [Ambience Healthcare Trust Center](https://apis.io/security/ambience-healthcare/ambience-healthcare-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Ambience Healthcare Scopes](https://apis.io/scopes/ambience-healthcare/ambience-healthcare-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.ambiencehealthcare.com/)
+- [Documentation](https://docs.ambiencehealthcare.com/)
+- [Sign up](https://www.ambiencehealthcare.com/demo)
+- [Blog](https://www.ambiencehealthcare.com/blog)
+- [Compliance](https://www.ambiencehealthcare.com/informatics)
+- [Terms of service](https://cdn.prod.website-files.com/65be6ed75db0972f744bb6b1/65c1a3f7d8cbb7b2397bd541_63fd4608cf1aa8041a98d378_terms.pdf)
+- [Privacy policy](https://www.ambiencehealthcare.com/privacy)
+- [GitHub](https://github.com/Ambience-Healthcare)
+
+## API Evangelist rating
+
+**Kin Score 30.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 50.0 |
+
+**Agent readiness 15.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 44.9** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ambience-healthcare/](https://apis.io/providers/ambience-healthcare/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Ambience Healthcare: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ambience-healthcare/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
